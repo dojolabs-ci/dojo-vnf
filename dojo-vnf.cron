@@ -1,0 +1,2 @@
+*/1 * * * * root /opt/SecThor/SecBox/bin/run_cron.sh &> /var/log/dojo-vnf-cron.log
+
