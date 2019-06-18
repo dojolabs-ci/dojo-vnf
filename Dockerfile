@@ -3,6 +3,7 @@ RUN apt update
 RUN apt -y install \
 	busybox-syslogd \
 	iptables \
+	openvswitch-common \
 	openjdk-8-jdk
 
 COPY dojo-vnf.cron /etc/cron.d/dojo-vnf
