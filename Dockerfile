@@ -1,10 +1,10 @@
 FROM dojolabs/dojo-os
-RUN apt update
-RUN apt -y install \
-	busybox-syslogd \
-	iptables \
-	openvswitch-common \
-	openjdk-8-jdk
+ARG CACHEBUST=1
+RUN apt update && apt -y install \
+			busybox-syslogd \
+			iptables \
+			openvswitch-common \
+			openjdk-8-jdk
 
 COPY dojo-vnf.cron /etc/cron.d/dojo-vnf
 RUN chmod 0644 /etc/cron.d/dojo-vnf
